@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MLBB Meta Tracker — Патч 2.2.16</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">MLBB<span>META</span></div>
+    <nav class="main-nav">
+      <a href="#meta">Мета</a>
+      <a href="#heroes">Герои</a>
+      <a href="#items">Предметы</a>
+      <a href="#counters">Контрпики</a>
+      <a href="#guides">Гайды</a>
+    </nav>
+    <div class="patch-badge">Патч 2.2.16</div>
+  </div>
+</header>
+
+<main>
+  <section id="meta" class="section">
+    <h2 class="section-title">Мета по линиям</h2>
+    <div class="line-tabs" id="lineTabs">
+      <button class="tab-btn active" data-line="Убийца">Лес (Джангл)</button>
+      <button class="tab-btn" data-line="Стрелок">Голд</button>
+      <button class="tab-btn" data-line="Маг">Мид</button>
+      <button class="tab-btn" data-line="Боец">Эксп</button>
+      <button class="tab-btn" data-line="Танк">Роум</button>
+    </div>
+    <div class="tier-list-container" id="tierList"></div>
+  </section>
+
+  <section id="heroes" class="section">
+    <h2 class="section-title">Все герои</h2>
+    <div class="hero-controls">
+      <input type="text" id="heroSearch" class="search-input" placeholder="Поиск по имени...">
+    </div>
+    <div class="catalog-layout">
+      <div class="catalog-grid" id="heroGrid"></div>
+      <div class="catalog-detail" id="heroDetail">
+        <p class="empty-state">Выберите героя из списка слева, чтобы увидеть его характеристики и гайд.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="items" class="section">
+    <h2 class="section-title">Предметы</h2>
+    <div class="item-filters" id="itemFilters">
+      <button class="role-chip active" data-effect="all">Все</button>
+      <button class="role-chip" data-effect="Атака">Атака</button>
+      <button class="role-chip" data-effect="Магия">Магия</button>
+      <button class="role-chip" data-effect="Защита">Защита</button>
+      <button class="role-chip" data-effect="Передвижение">Передвижение</button>
+    </div>
+    <div class="catalog-layout">
+      <div class="catalog-grid" id="itemGrid"></div>
+      <div class="catalog-detail" id="itemDetail">
+        <p class="empty-state">Выберите предмет из списка слева, чтобы увидеть его описание.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="counters" class="section">
+    <h2 class="section-title">Контрпики</h2>
+    <div class="counter-tool">
+      <div class="counter-field">
+        <label for="myHero">Мой герой</label>
+        <select id="myHero" class="select-input"></select>
+      </div>
+    </div>
+    <div id="counterResult" class="counter-result">
+      <p class="empty-state">Выберите героя выше.</p>
+    </div>
+  </section>
+
+  <section id="guides" class="section">
+    <h2 class="section-title">Гайды и заклинания</h2>
+    <div class="accordion" id="accordion"></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p id="footerDate">Загрузка данных...</p>
+  <p class="disclaimer">Сайт не аффилирован с Moonton. Mobile Legends: Bang Bang — торговая марка Moonton.</p>
+</footer>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
